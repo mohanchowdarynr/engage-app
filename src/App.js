@@ -1,5 +1,6 @@
 import './App.css';
-import { ChatEngine, ChatFeed } from 'react-chat-engine';
+import { ChatEngine } from 'react-chat-engine';
+import ChatFeed from './components/ChatFeed';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
 			userName='Mohan'
 			userSecret='12345'
       height="100vh"
-      renderChatFeed={(chatAppState) => ChatFeed}
+      renderChatFeed={(chatAppProps) => <ChatFeed { ...chatAppProps} /> }
 		/>
     </div>
   );
